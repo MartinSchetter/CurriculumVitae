@@ -1,108 +1,100 @@
-% A Template for Professional CV/Resume
-% Preamble Begins Here
-\documentclass[12pt,a4paper]{article}
+%                           A Template for Professional CV/Resume
 
-% Packages
-\usepackage[left=1.5cm,right=1.5cm,top=1cm,bottom=2cm]{geometry}
+
+\documentclass[9pt,a4paper]{article}
+
+% PACKAGES
+\usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
 \usepackage{fontawesome}
 \usepackage{setspace}
 \usepackage{fontspec}
-\usepackage{newtxtext,newtxmath}
-\renewcommand{\familydefault}{\sfdefault}
+%\usepackage{newtxtext,newtxmath}   %fichier .sty absent
 \usepackage{graphicx}
-\usepackage{transparent}
+%\usepackage{transparent}           %fichier .sty absent
 \usepackage{color}
 \usepackage[svgnames]{xcolor}
 \usepackage{multicol}
 \usepackage{tikz}
 \usepackage{array} 
 \usepackage{colortbl}
+%\usepackage{enumitem}               %fichier .sty absent
 
 % For hiding page no
 \pagestyle{empty}
 
-% Define Command for name and job position
-\newcommand{\myname}[1]{\textbf{\Huge\selectfont\MakeUppercase{#1}}\\}
-\newcommand{\myjobtitle}[1]{{\large #1}\\}
+% COMMANDS
+\renewcommand{\familydefault}{\sfdefault}
 
-% Define Command For Topic,Upper case subtopic,Subtopic and Short Horizontal Black Line 
+\newcommand{\myname}[1]{\textbf{\huge\selectfont\MakeUppercase{#1}}\\}
+\newcommand{\myjobtitle}[1]{{\Large #1}\\}
 \newcommand{\myline}[1]{\rule{#1}{1.0pt}\\}
-
-\newcommand{\topic}[1]{\textbf{\Large\selectfont\MakeUppercase{#1}}\\\vspace{-0.5cm}\myline{1.0cm}}
-
+\newcommand{\adress}[1]{\normalsize\selectfont{#1}}
+\newcommand{\topic}[1]{\textbf{\Large\selectfont\MakeUppercase{#1}}\\\vspace{-1em}\myline{1.0cm}}
 \newcommand{\uppersubtopic}[1]{\textbf{\normalsize\selectfont\MakeUppercase{#1}}\\}
-
 \newcommand{\subtopic}[1]{\textbf{\normalsize\selectfont{#1}}\\}
-% Sub topic with location side by side 
 \newcommand{\lsubtopic}[3]{
   \begin{minipage}[t]{0.7\linewidth}
     \textbf{\normalsize\selectfont{#1}}
   \end{minipage}
   \hfill
-  \begin{minipage}[t]{0.25\linewidth}
+  \begin{minipage}[t]{0.27\linewidth}
     \raggedleft
     {#2\\}
   \end{minipage}
   \par
 }
-% location
-\newcommand{\adress}[1]{\normalsize\selectfont{#1}}
-
-% Preamble ends Here
 
 \begin{document}
 
-
 % Name, job title, and horizontal line
-\setstretch{1.5}
+%\setstretch{1.5}
 \begin{flushleft}
-  \myname{Martin Paul Raphael} %name
-  \myname{SCHETTER} %surname
-  \myjobtitle{{\color{FireBrick}Biotechnology and eHealth Engineering-student}} %designation
-   \textcolor{gray!50}{\rule{\linewidth}{1pt}}\\
+    \myjobtitle{{\color{FireBrick}Biotechnology and eHealth Engineering-student}} %designation
+   %\textcolor{gray!50}{\rule{\linewidth}{1pt}}\\
 \end{flushleft}
+\vspace{-0.5em}
 
 % Separating Rest of document on two column
 % First Page
-\vspace{-1.25cm} % To make horizontal and vertical line                         meet
-\begin{multicols}{2}
-\setlength{\arrayrulewidth}{1pt} % Set line thickness
-\arrayrulecolor{gray!50}
+%\vspace{-1.25cm} % To make horizontal and vertical line                         meet
 
-\noindent\begin{tabular}{p{0.3\textwidth}|@{\hspace{5mm}}p{0.65\textwidth}}
+\noindent
+\begin{minipage}[c]{0.3\linewidth}
 
-{
+%\begin{multicols*}{2}
+%\setlength{\arrayrulewidth}{1pt} % Set line thickness
+%\arrayrulecolor{gray!50}
+
+%\noindent\begin{tabular}{p{0.3\textwidth}|@{\hspace{5mm}}p{0.65\textwidth}}
+
 \setstretch{1.4}
 \begin{flushleft}
+    \myname{Martin} %name
+  \myname{SCHETTER} %surname
+
+%\textcolor{gray!50}{\rule{\linewidth}{0.5pt}}\\
+\vspace{1em}
 \topic{DETAILS}
 \uppersubtopic{address} 
 19 allee Jean de la Croix\\
 77200 Torcy (France)\\
 \uppersubtopic{email}
-martin.schetter@outlook.com\\ % mail adress here
-\uppersubtopic{\underline{French Nationality}}
+martin.schetter@outlook.com\\ 
+\uppersubtopic{French Nationality}
 \vspace{0.1em} 
 
-\textcolor{gray!50}{\rule{\linewidth}{0.5pt}}\\
-\topic{Hobbies}
-\vspace{-1em} 
-\begin{itemize}
-    \setlength\itemsep{-0.5em}
-    \item[$\ast$] \textrm{Exploring the wildlife through Journeys}
-    \item[$\ast$] \textrm{Discovering myself through the Meditation}
-    \item[$\ast$] Surpassing myself though Sports}
-\end{itemize}
-
-\textcolor{gray!50}{\rule{\linewidth}{0.5pt}}\\
+%\textcolor{black}{\rule{\linewidth}{0.5pt}}\\
+%\myline{\linewidth}
+\vspace{1em}
 \topic{Languages}
-\subtopic{French} % language skills if any..
+\subtopic{French} 
 \vspace{-1em} 
 \begin{itemize}
     \setlength\itemsep{-0.5em}
     \item Native tongue
 \end{itemize}
 \vspace{-1em} 
-\subtopic{English} % language skills if any..
+\subtopic{English} 
 \vspace{-1em} 
 \begin{itemize}
     \setlength\itemsep{-0.5em}
@@ -116,34 +108,69 @@ martin.schetter@outlook.com\\ % mail adress here
     \setlength\itemsep{-0.5em}
     \item Conversational   
 \end{itemize}
+\vspace{-1em} 
+\subtopic{German} % language skills if any..
+\vspace{-1em} 
+\begin{itemize}
+    \setlength\itemsep{-0.5em}
+    \item Schooling level   
+\end{itemize}
 
+%\textcolor{gray!50}{\rule{\linewidth}{0.5pt}}\\
+\vspace{1em}
+\topic{Hobbies}
+\vspace{-1em} 
+\begin{itemize}%[leftmargin=0.5mm]
+    \setlength\itemsep{-0.5em}
+    \item[$\ast$] \textrm{Exploring the wildlife \\through Journeys}
+    \item[$\ast$] \textrm{Discovering myself \\through the Meditation}
+    \item[$\ast$] \textrm{Surpassing myself \\through Sports}
+\end{itemize}
 
-\textcolor{gray!50}{\rule{\linewidth}{0.5pt}}\\
+\vspace{1em}
+\topic{Competences}
+\vspace{-1em} 
+\begin{itemize}%[leftmargin=0.5mm]
+    \setlength\itemsep{-0.5em}
+    \item R + MATLAB
+    %\item Advanced in Machine Learning and Biostatistics oriented application
+    \item Python + C + Java
+    %\item Comfortable in polyvalent use for different application 
+    \item LaTeX/BibTeX
+    %\item Comfortable in writing exclusively in LaTeX.
+    \item Git/GitHub
+    %\item Able to perform the command to ease the knowledge merging of a workteam
+    \item Bash/Shell
+    %\item Comfortable for file management and able to understand and reproduce complex commands. 
+\end{itemize}
+
+%\textcolor{gray!50}{\rule{\linewidth}{0.5pt}}\\
 \topic{References}
-\setlength\itemsep{-0.5em}
 \subtopic{Solange DENERVAUD}
 Internship ex-Supervisor
-\textit{solange.denervaud@gmail.com}
+\textit{solange.denervaud@gmail.com}\\
 \subtopic{Adrien UGON}
 Director of Studies in Paris
 \textit{adrien.ugon@esiee.fr}
 \end{flushleft}
-}
-&
-{
+%}
+%&
+%{
+\end{minipage} % no space if you would like to put them side by side
+\begin{minipage}[c]{0.7\linewidth}
+
 \setstretch{1.4}
 \begin{flushleft}
-    
-     
+    \vspace{0.5em}
     \topic{education} % edit your institutions and courser in lsubtopic give course, institutation name in first and provide adress in second 
-    
     \lsubtopic{{\color{DodgerBlue} University, Tecnologico de Monterrey} }{Monterrey, Mexico} 
         \centering
         {\color{Gray}Aug 2023 - Dec 2023}
     \begin{itemize}
         \setlength\itemsep{-0.5em}
-        \item Discovered university and the vision of science in Mexico.
-        \item Currently working on the publication of a review article investigating obesity in the brain.
+        \item Discovered an American based university and the vision of science in the north of Mexico in a biotechnology post-engineering graduation course.
+        \item Enjoyed a semester of research oriented classes in microbiology, celular physilogy, instrumental analysis, genetic engineering with top tiers mexican engineers.
+        \item Currently working on the publication of a review article investigating the impact of \omega 3 on the obesity disease between the adipose tissue and hippothalamus.
     \end{itemize}
 
     \lsubtopic{{\color{DodgerBlue}Engineering school, ESIEE Paris} }{Noisy-Le-Grand, France} 
@@ -151,40 +178,50 @@ Director of Studies in Paris
         {\color{Gray}Sep 2020-Jun 2023}
     \begin{itemize}
         \setlength\itemsep{-0.5em}
-        \item A five-year program leading to the equivalent of an MSc in Engineering, specialised in Biotechnologies and eHealth.
-        \item Managed different associations and different team of students.
+        \item Currently in a five-year program leading to the equivalent of an MSc in Engineering, specialised in Biotechnologies and eHealth.
+        \item Learnt to use very theoritical concept of traditionnal mathematics, statistics and machine learning algorithms towards goals that can lead humanity for the better.
+        \item Fulfilled myself with scientific and misceallenous projects in an environment full of doctors, researchers and engineering-student in various specialities.
+        \item Managed different associations and different team of students for the well-being of students in a the very high-demanding environment of ESIEE Paris.
     \end{itemize}
   
-\lsubtopic{{\color{DodgerBlue}College preparing class, Lycee Jean Moulin} }{Torcy, France}
-    \centering
-    {\color{Gray}Sep 2017 - Jun 2019}
-\begin{itemize}
-    \setlength\itemsep{-0.5em}
-    \item A course preparing preparing engineering school : very intensive course in maths, physics, algorithm and informatics.
-    \item Pleased to get my scientific Baccalauréat with distinction.
-\end{itemize}
+    \lsubtopic{{\color{DodgerBlue}College preparing class, Lycee Jean Moulin} }{Torcy, France}
+        \centering
+        {\color{Gray}Sep 2017 - Jun 2019}
+    \begin{itemize}
+        \setlength\itemsep{-0.5em}
+        \item A two-year secondary level course preparing the engineering school : very intensive course in maths, physics and informatics.
+        \item Learnt to core theories of mathematics, physics and computer science that will help me throughout my whole carrers to understand abstracts concepts.
+        \item Successfully managed my emotions to perform in a relentless and competitive environment with an extremely high density of hours, both at school and at home.
+        \item Pleased to get my scientific Baccalauréat with distinction.
+    \end{itemize}
 
-\textcolor{gray!50}{\rule{\linewidth}{0.5pt}}\\
-\topic{internship} % internships experiences
+    %\textcolor{gray!50}{\rule{\linewidth}{0.5pt}}\\
+    \topic{internship} % internships experiences
     \lsubtopic{{\color{DodgerBlue}Brain research, CHUV Lausanne} }{Lausanne, Switzerland}
 
     {\color{Gray}May 2022 - Aug 2022} %date
     \begin{itemize}
         \setlength\itemsep{-0.5em}
-    \item Introduced to research in neuropsychology with a 3-month internship  to investigate the impact of pedagogy on the brain.
-    \item A continuous 15-month of remote work to publish an article.
+    \item Introduced to research in neuropsychology with a 3-month internship  to investigate the impact of pedagogy on the development of the brain.
+    \item Immerged in a stimulating lab environment where PhD and postdoc researchers permit me to open my views of science and to entrevoir a futur in the research field.
+    \item Learnt the process of writing a manuscript in a back and forth remote work between collaborators in order to achieve the publication of the article.
+
     \end{itemize}
 
-    \textcolor{gray!50}{\rule{\linewidth}{0.5pt}}\\
+    %\textcolor{gray!50}{\rule{\linewidth}{0.5pt}}\\
     \topic{Publication}
     
-    Schetter et al. (2023). Learning by Heart or with Heart: Brain Asymmetry Reflects Pedagogical Practices. Brain Sciences, 13(9), 1270.
+    Schetter M, Romascano D, Gaujard M, Rummel C, Denervaud S. \\ Learning \textit{by} Heart or \textit{with} Heart: Brain Asymmetry Reflects Pedagogical Practices. \\Brain Sciences. 2023; 13(9):1270.
     https://www.mdpi.com/2460572
 
 \end{flushleft}
-}
-\end{tabular}
-\end{multicols}
+
+\end{minipage}
+
+\end{document}
+
+%\end{tabular}
+%\end{multicols*}
 
 % % page two
 
@@ -309,5 +346,3 @@ Director of Studies in Paris
 % }
 % \end{tabular}
 % \end{multicols}
-
-\end{document}
